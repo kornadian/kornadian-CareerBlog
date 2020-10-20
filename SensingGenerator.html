@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Alex's Career Blog</title>
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -20,7 +20,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item ">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./Resume.html">Resume</a>
@@ -37,7 +37,7 @@
           </li>
         </ul>
       </div>
-  </nav>
+    </nav>
 
 
 
@@ -45,6 +45,67 @@
 
 
     <h1>Hello, world!</h1>
+
+    <div class="card" id="traffic_generator">
+      <div class="card-header">
+        <h4>To Generate Sensing Data, 
+          <a class="btn btn-primary" data-toggle="collapse" href="#GeneratorForm" role="button" aria-expanded="false" aria-controls="GeneratorForm">Click Here.</a>
+        </h4>
+      </div>
+      <div class="card-body collapse multi-collapse" id="GeneratorForm">
+        <h5 class="card-title">Complete the generator form </h5>
+        
+          <form name="traffic_form">
+            <h6>Common Data</h6>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="user_id">User ID</label>
+                <input id="user_id" class="form-control" type="text" placeholder="Default : 0000000000  ( 0 x 10 )">
+              </div>
+              <div class="form-group col-md-3">
+                <label for="device_id">Device ID</label>
+                <input id="device_id" class="form-control" type="text" placeholder="Default : 0000000000  ( 0 x 10 )">
+              </div>
+              <div class="form-group col-md-3">
+                <label for="sensor_type">Sensor Type</label>
+                <input id="sensor_type" class="form-control" type="text" placeholder="Default : 00001">
+              </div>
+            </div>
+            <div class="form-row align-items-center">
+              <label for="sensor_value" class="col-sm-2 col-form-label">Sensing Value</label>
+              
+              <div class="col-sm-4">
+                <input id="sensor_value" class="form-control" type="text" placeholder="0 ~ 255">
+              </div>  
+              <div class="col-sm-4">
+                <div class="form-check custom-control custom-switch">
+                  <input class="custom-control-input" type="checkbox" id="randomCheck" name="random_yn" value="on" checked>
+                  <label class="custom-control-label" for="randomCheck">
+                    Random
+                  </label>
+                  
+                </div>
+              </div>            
+            </div>
+
+            </br></br>
+            <h6>Frequency</h6>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="secTerm">How long term for each Request (ms): </label>
+                <input id="secTerm" class="form-control" type="text" placeholder="Enter miliseconds (default:10ms)">
+              </div>
+              <div class="form-group col-md-3">
+                <label for="numReq">How many times?</label>
+                <input id="numReq" class="form-control" type="text" placeholder="Enter the Number of Request (default: 10)">
+              </div>
+            </div>
+            <a id="submit_btn" class="btn btn-primary" type="submit" onclick="generateTraffic()">submit </a>
+          </form>   
+      </div>
+    </div>
+
+
 
 
 
@@ -110,5 +171,12 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/sensor.js"></script>
+
   </body>
 </html>
